@@ -23,8 +23,12 @@ function Navbar() {
         <ul
           className={click ? `${style.navMenu} ${style.active}` : style.navMenu}
         >
-          {routes.map((route) => (
-            <NavbarLink route={route} closeMobileMenu={closeMobileMenu} />
+          {routes.map((route, index) => (
+            <NavbarLink
+              key={index}
+              route={route}
+              closeMobileMenu={closeMobileMenu}
+            />
           ))}
         </ul>
         <div className={style.icons}>
@@ -43,11 +47,7 @@ function Navbar() {
 function useNavbar() {
   const [click, setClick] = useState(false);
 
-  const handleClick = () =>
-    setClick((click) => {
-      document.body.style.overflow = !click ? "hidden" : "scroll";
-      return !click;
-    });
+  const handleClick = () => setClick((click) => !click);
   const closeMobileMenu = () => setClick(false);
 
   return {

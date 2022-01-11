@@ -11,14 +11,16 @@ function NavbarDropdown(props: Props) {
   const { routes } = props;
   const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
+  const handleClick = () => setClick((click) => !click);
 
   return (
     <>
       <ul
         onClick={handleClick}
         className={
-          click ? `${style.dropdownMenu} ${style.clicked}` : style.dropdownMenu
+          click
+            ? `${style.dropdownMenu} ${style.clicked}`
+            : `${style.dropdownMenu}`
         }
       >
         {routes.map((item, index) => {

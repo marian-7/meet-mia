@@ -1,3 +1,6 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/functions";
+@import "src/styles/helpers/mixins";
 
 * {
   margin: 0;
@@ -7,4 +10,89 @@
 
 html, body {
   font-family: "Montserrat", "Arial", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -3%;
+  line-height: 21px;
+
+  @include breakpoint(md) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -2%;
+  line-height: 21px;
+
+  @include breakpoint(md) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 21px;
+
+  @include breakpoint(md) {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 0.24px;
+  line-height: 21px;
+
+  @include breakpoint(md) {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.48px;
+  line-height: 21px;
+
+  @include breakpoint(md) {
+    font-size: 12px;
+  }
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.72px;
+  line-height: 24px;
+
+  @include breakpoint(md) {
+    font-size: 12px;
+  }
+}
+
+button {
+  color: $color-white;
+  background-color: $color-primary;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  font-family: "Montserrat", "Arial", sans-serif;
+  padding: rem(12) rem(70);
+  border: 0;
+  outline: none;
+
+  &:hover {
+    background-color: $color-dark-primary;
+    cursor: pointer;
+  }
 }

@@ -9,7 +9,7 @@
   left: 0;
   list-style: none;
   text-align: start;
-  
+  z-index: 20;
   @include breakpoint(md) {
     position: unset;
     width: 100%;
@@ -19,6 +19,12 @@
   & li {
     background: $color-primary;
     cursor: pointer;
+
+    & a {
+      @include breakpoint(md) {
+        text-align: center;
+      }
+    }
 
     &:hover {
       background: $color-dark-primary;
