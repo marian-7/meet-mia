@@ -1,69 +1,124 @@
 @import "src/styles/helpers/functions";
 @import "src/styles/helpers/variables";
+@import "src/styles/helpers/mixins";
 
-.nav {
-  width: 100%;
-  background-color: $color-primary;
-  padding: rem(12);
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-areas: "logo logo nav nav nav nav nav icons";
-}
+.navbar {
+  background: $color-primary;
+  padding: 0 rem(10);
+  display: flex;
+  justify-content: space-between;
 
-.imageContainer {
-  grid-area: logo;
-  max-width: rem(64);
-
-  & img {
-    width: 100%;
+  @include breakpoint(md) {
+    align-items: center;
+    display: grid;
+    grid-template-areas: "nav logo icons";
   }
 }
 
-.links {
-  grid-area: nav;
-  list-style: none;
+.navbarLogo {
+  max-width: rem(64);
+  color: $color-white;
+  cursor: pointer;
+  padding: rem(5) 0;
+
+  & img {
+    display: block;
+    width: 100%;
+  }
+
+  @include breakpoint(md) {
+    grid-area: logo;
+  }
+}
+
+.navMenu {
   display: flex;
   justify-content: flex-end;
+  list-style: none;
+  text-align: center;
+  margin-left: auto;
 
-  & li {
-    max-width: rem(150);
-    height: 100%;
-    width: max(10%, rem(130));
+  @include breakpoint(md) {
     display: flex;
-    & a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      text-decoration: none;
-      color: $color-white;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: rem(68);
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
 
-      &:hover {
-        color:aqua;
-      }
+    &.active {
+      background: $color-primary;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
     }
   }
 }
 
-.dropdownArrow {
-  max-width: rem(25);
+.navLinksMobile {
+  display: none;
 
-  &:hover {
-    color: aqua;
+  @include breakpoint(md) {
+    display: block;
+    text-align: center;
+    padding: rem(24);
+    margin: rem(32) auto;
+    border-radius: rem(4);
+    width: 80%;
+    background: $color-dark-primary;
+    text-decoration: none;
+    color: $color-white;
+
+    &:hover {
+      background: $color-white;
+      color: $color-dark-primary;
+      transition: 250ms;
+    }
+  }
+}
+
+.menuIcon {
+  display: none;
+
+  @include breakpoint(md) {
+    grid-area: nav;
+    display: block;
     cursor: pointer;
   }
 }
 
-.userIcons {
-  grid-area: icons;
+.icons {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: rem(21) 0;
+
+  @include breakpoint(md) {
+    grid-area: icons;
+  }
 }
 
 .iconContainer {
-  width: 50%;
   height: 100%;
+  width: rem(40);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: rem(10);
+
+  & img {
+    width: min(100%, rem(26));
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
+
+.active {
+}
+

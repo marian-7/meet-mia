@@ -1,0 +1,41 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/functions";
+@import "src/styles/helpers/mixins";
+
+.dropdownMenu {
+  width: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  text-align: start;
+  
+  @include breakpoint(md) {
+    position: unset;
+    width: 100%;
+    display: block;
+  }
+
+  & li {
+    background: $color-primary;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-dark-primary;
+    }
+  }
+
+  &.clicked {
+    display: none;
+  }
+
+}
+
+.dropdownLink {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: $color-white;
+  padding: 16px;
+}

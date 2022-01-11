@@ -1,4 +1,14 @@
 $color-black: #000;
 $color-white: #FFF;
 $color-primary: #FF7245;
+$color-dark-primary: #F85A2A;
 $background-grey: #E8E9EA;
+
+$breakpoints: (
+        xs: 0,
+        sm: 600px,
+        md: 960px,
+        xmd: 1024px,
+        lg: 1280px,
+        xl: 1920px,
+);
