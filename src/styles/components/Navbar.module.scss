@@ -2,11 +2,23 @@
 @import "src/styles/helpers/variables";
 @import "src/styles/helpers/mixins";
 
+.navWrapper {
+  width: 100vw;
+  height: rem(68);
+  background-color: $color-primary;
+
+  @include breakpoint(xl) {
+
+  }
+}
+
 .navbar {
   background: $color-primary;
   padding: 0 rem(10);
   display: flex;
   justify-content: space-between;
+  width: min(100%, rem(1920));
+  margin: 0 auto;
 
   @include breakpoint(md) {
     align-items: center;
