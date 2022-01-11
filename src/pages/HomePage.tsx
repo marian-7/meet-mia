@@ -1,5 +1,10 @@
 function HomePage() {
-  return <p>Home</p>;
+  return (
+    <>
+      <p style={{ height: "400vh" }}>Home</p>
+      <p>Bottom</p>
+    </>
+  );
 }
 
 export default HomePage;

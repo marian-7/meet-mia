@@ -6,10 +6,6 @@
   width: 100vw;
   height: rem(68);
   background-color: $color-primary;
-
-  @include breakpoint(xl) {
-
-  }
 }
 
 .navbar {
@@ -23,7 +19,7 @@
   @include breakpoint(md) {
     align-items: center;
     display: grid;
-    grid-template-areas: "nav logo icons";
+    grid-template-areas: "nav nav logo icons";
   }
 }
 
