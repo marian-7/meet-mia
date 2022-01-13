@@ -37,6 +37,7 @@
   width: 100%;
 
   &.grayBg {
+    margin-top: rem(20);
     background-color: $color-background-grey;
   }
 
@@ -45,7 +46,6 @@
   }
 
 }
-
 
 .productItemContainer {
   width: rem(200);

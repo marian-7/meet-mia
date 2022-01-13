@@ -7,12 +7,16 @@ import classNames from "classnames";
 import CategoryCard from "../components/CategoryCard";
 
 function HomePage() {
+  const { aboutBtnHandler } = useHomepage();
+
   return (
     <>
       <div className={style.coverContainer}>
         <h1 className={style.mainTitle}>Torte, kolači i slane poslastice</h1>
         <h4 className={style.subtitle}>Istražite naše specijalitete</h4>
-        <button className={style.exploreBtn}>Istraži</button>
+        <button onClick={aboutBtnHandler} className={style.exploreBtn}>
+          Istraži
+        </button>
       </div>
       <div className={classNames(style.sectionWrapper, style.grayBg)}>
         <div className={style.productsSection}>
@@ -45,6 +49,16 @@ function HomePage() {
       </div>
     </>
   );
+}
+
+function useHomepage() {
+  const aboutBtnHandler = () => {
+    window.scroll({ top: window.innerHeight + 20, behavior: "smooth" });
+  };
+
+  return {
+    aboutBtnHandler,
+  };
 }
 
 export default HomePage;
