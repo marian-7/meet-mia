@@ -4,6 +4,7 @@ import { ReactComponent as ArrowIcon } from "assets/icons/arrow-right.svg";
 import { products } from "../products";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import CategoryCard from "../components/CategoryCard";
 
 function HomePage() {
   return (
@@ -23,7 +24,25 @@ function HomePage() {
           </Link>
         </div>
       </div>
-      <div className={style.sectionWrapper}></div>
+      <div className={style.sectionWrapper}>
+        <div className={style.categoriesSection}>
+          <CategoryCard
+            link="/proizvodi?filter=torte"
+            title="Torte"
+            backgroundUrl="kat-torte.jpg"
+          />
+          <CategoryCard
+            link="/proizvodi?filter=kolaci"
+            title="Kolači"
+            backgroundUrl="kat-kolaci.jpg"
+          />
+          <CategoryCard
+            link="/proizvodi?filter=slano"
+            title="Slane poslastice"
+            backgroundUrl="kat-slano.jpg"
+          />
+        </div>
+      </div>
     </>
   );
 }
