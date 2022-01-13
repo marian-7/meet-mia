@@ -40,6 +40,9 @@
 
   @include breakpoint(md) {
     grid-area: logo;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

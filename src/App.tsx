@@ -6,6 +6,7 @@ import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ContactPage from "./pages/KontaktPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="proizvodi" element={<ProductsPage />} />
         <Route path="kontakt" element={<ContactPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
