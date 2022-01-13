@@ -19,6 +19,10 @@
   @include breakpoint(md) {
     align-items: center;
     display: grid;
+    grid-template-areas: "nav logo icons";
+  }
+
+  @include breakpoint(sm) {
     grid-template-areas: "nav nav logo icons";
   }
 }

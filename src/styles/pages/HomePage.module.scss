@@ -1,5 +1,6 @@
 @import "src/styles/helpers/variables";
 @import "src/styles/helpers/functions";
+@import "src/styles/helpers/mixins";
 
 .coverContainer {
   width: 100%;
@@ -30,6 +31,76 @@
 .exploreBtn {
   animation: slide-up 1s ease-out;
 }
+
+.sectionWrapper {
+  margin: rem(90) 0;
+  padding: rem(90) 0;
+  width: 100%;
+
+  &.grayBg {
+    background-color: $color-background-grey;
+  }
+
+  @include breakpoint(md) {
+    margin: rem(40) 0;
+    padding: rem(40) 0;
+  }
+
+}
+
+
+.productItemContainer {
+  width: rem(200);
+  margin-right: rem(20);
+}
+
+.productsSection {
+  width: min(100%, rem(1920));
+  padding: 0 rem(160);
+  margin: 0 auto;
+
+  & h3 {
+    font-weight: 500;
+  }
+
+  @include breakpoint(md) {
+    padding: 0 rem(40);
+  }
+
+  @include breakpoint(sm) {
+    padding: 0 rem(20);
+  }
+}
+
+.productsSectionTitle {
+  margin-bottom: rem(90);
+
+  @include breakpoint(md) {
+    margin-bottom: rem(40);
+  }
+}
+
+.seeMoreLink {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  color: $color-black;
+  margin-top: rem(60);
+
+  & svg {
+    margin-left: rem(8);
+  }
+
+  &:hover {
+    color: $color-primary;
+
+    & svg {
+      fill: $color-primary;
+    }
+  }
+}
+
 
 @keyframes slide-right {
   from {

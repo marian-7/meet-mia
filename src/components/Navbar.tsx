@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import logo from "assets/images/MeetMia-logo.png";
 import hamburgerIcon from "assets/icons/menu-icon.svg";
-import shoppingCartIcon from "assets/icons/shopping-cart-icon.svg";
-import profileIcon from "assets/icons/profile-icon.svg";
+import { ReactComponent as ShoppingCartIcon } from "assets/icons/shopping-cart-icon.svg";
+import { ReactComponent as ProfileIcon } from "assets/icons/profile-icon.svg";
 import { Link } from "react-router-dom";
 import style from "styles/components/Navbar.module.scss";
 import NavbarLink from "./NavbarLink";
@@ -33,10 +33,10 @@ function Navbar() {
         </ul>
         <div className={style.icons}>
           <div className={style.iconContainer}>
-            <img src={shoppingCartIcon} alt="shopping-cart" />
+            <ShoppingCartIcon />
           </div>
           <div className={style.iconContainer}>
-            <img src={profileIcon} alt="profile" />
+            <ProfileIcon />
           </div>
         </div>
       </nav>

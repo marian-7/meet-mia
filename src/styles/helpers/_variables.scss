@@ -2,13 +2,15 @@ $color-black: #000;
 $color-white: #FFF;
 $color-primary: #FF7245;
 $color-dark-primary: #F85A2A;
-$background-grey: #E8E9EA;
+$color-background-grey: #E8E9EA;
 
 $breakpoints: (
         xs: 0,
         sm: 600px,
+        xsm: 760px,
         md: 960px,
         xmd: 1024px,
         lg: 1280px,
+        xlg: 1440px,
         xl: 1920px,
 );

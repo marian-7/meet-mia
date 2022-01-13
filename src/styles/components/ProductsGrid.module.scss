@@ -1,0 +1,26 @@
+@import "src/styles/helpers/functions";
+@import "src/styles/helpers/mixins";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: rem(30);
+  grid-row-gap: rem(60);
+
+  @include breakpoint(lg) {
+    grid-column-gap: rem(10);
+    grid-row-gap: rem(30);
+  }
+}
+
+.gridElement {
+  grid-column-end: span 3;
+
+  @include breakpoint(xsm) {
+    grid-column-end: span 6;
+  }
+}
+
+.productItemContainer {
+  margin-right: rem(35);
+}
