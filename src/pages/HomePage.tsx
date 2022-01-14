@@ -21,7 +21,7 @@ function HomePage() {
       <div className={classNames(style.sectionWrapper, style.grayBg)}>
         <div className={style.productsSection}>
           <h3 className={style.productsSectionTitle}>Naši proizvodi</h3>
-          <ProductsGrid products={products} />
+          <ProductsGrid limit={8} products={products} horizontalScroll />
           <Link to="/proizvodi" className={style.seeMoreLink}>
             Pogledaj više
             <ArrowIcon />

@@ -16,6 +16,10 @@
 .gridElement {
   grid-column-end: span 3;
 
+  @include breakpoint(xmd) {
+    grid-column-end: span 4;
+  }
+
   @include breakpoint(xsm) {
     grid-column-end: span 6;
   }

@@ -5,6 +5,7 @@
 .categoryCard {
   position: relative;
   width: 100%;
+  max-height: rem(450);
   overflow: hidden;
 
   &:hover {

@@ -41,7 +41,7 @@
     background-color: $color-background-grey;
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(xmd) {
     padding: rem(40) 0;
   }
 
@@ -61,7 +61,7 @@
     font-weight: 500;
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(xmd) {
     padding: 0 rem(40);
   }
 
@@ -73,7 +73,7 @@
 .productsSectionTitle {
   margin-bottom: rem(90);
 
-  @include breakpoint(md) {
+  @include breakpoint(xmd) {
     margin-bottom: rem(40);
   }
 }
@@ -107,7 +107,7 @@
   padding: 0 rem(160);
   margin: 0 auto;
 
-  @include breakpoint(md) {
+  @include breakpoint(xmd) {
     padding: 0 rem(40);
     grid-column-gap: rem(20);
   }

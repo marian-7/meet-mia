@@ -12,7 +12,7 @@ function Navbar() {
   const { click, handleClick, closeMobileMenu } = useNavbar();
 
   return (
-    <div className={style.navWrapper}>
+    <header className={style.navWrapper}>
       <nav className={style.navbar}>
         <Link to="/" className={style.navbarLogo} onClick={closeMobileMenu}>
           <img src={logo} alt="meet-mia-logo" />
@@ -40,7 +40,7 @@ function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 }
 

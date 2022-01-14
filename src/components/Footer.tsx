@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className={style.footerWrapper}>
+    <footer className={style.footerWrapper}>
       <div className={style.footer}>
         <div className={style.footerSection}>
           <p className={style.sectionTitle}>Linkovi</p>
@@ -81,7 +81,7 @@ function Footer() {
           </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

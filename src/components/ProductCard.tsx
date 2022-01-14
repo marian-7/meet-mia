@@ -3,24 +3,29 @@ import { Product } from "products";
 import style from "styles/components/ProductCard.module.scss";
 import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
+import classNames from "classnames";
 
 interface Props {
   product: Product;
+  isGridEl?: boolean;
   className?: string;
 }
 
 function ProductCard(props: Props) {
-  const { product, className } = props;
+  const { product, isGridEl, className } = props;
+
+  const cardClasses = classNames({
+    [style.productCard]: true,
+    [className ?? ""]: className,
+    [style.fixedWidth]: isGridEl,
+  });
 
   return (
-    <Link
-      to={`proizvodi/${product.id}`}
-      className={`${style.productCard} ${className}`}
-    >
+    <Link to={`/proizvodi/${product.id}`} className={cardClasses}>
       <div className={style.productImageContainer}>
         <img
           className={style.productImage}
-          src={window.location.href + product.imgUrl}
+          src={window.location.origin + product.imgUrl}
           alt={product.name}
         />
       </div>
