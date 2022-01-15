@@ -1,0 +1,21 @@
+@import "src/styles/helpers/variables";
+
+.MuiButtonBase-root {
+  &.MuiTab-root {
+    text-transform: none;
+
+    &.Mui-selected {
+      color: $color-primary;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.MuiTabs-scroller {
+  & .MuiTabs-indicator {
+    background-color: $color-primary;
+  }
+
+}

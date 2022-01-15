@@ -1,0 +1,21 @@
+@import "src/styles/helpers/functions";
+@import "src/styles/helpers/mixins";
+@import "src/styles/helpers/variables";
+
+.tabs {
+  margin-top: rem(20);
+}
+
+.swipeableView {
+  margin-top: rem(10);
+}
+
+.tab {
+  @include breakpoint(xmd) {
+    width: 50%;
+  }
+}
+
+.tabContent {
+  width: 100%;
+}

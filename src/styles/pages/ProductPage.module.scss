@@ -1,0 +1,161 @@
+@import "src/styles/helpers/functions";
+@import "src/styles/helpers/mixins";
+@import "src/styles/helpers/variables";
+
+.sectionWrapper {
+  padding: rem(45) 0;
+
+  &.bgGrey {
+    background-color: $color-background-grey;
+  }
+
+  &.bottomBorder {
+    border-bottom: rem(1) solid rgba($color-text-grey, 0.3);
+  }
+
+  @include breakpoint(xmd) {
+    padding: rem(40) 0;
+  }
+
+  @include breakpoint(sm) {
+    padding: rem(20) 0;
+  }
+}
+
+.section {
+  width: min(100%, rem(1920));
+  padding: 0 rem(160);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: rem(90);
+
+  @include breakpoint(xmd) {
+    grid-template-columns: 1fr;
+    grid-row-gap: rem(20);
+    padding: 0 rem(40);
+  }
+
+  @include breakpoint(sm) {
+    padding: 0 rem(20);
+  }
+}
+
+.suggestedSection {
+  width: min(100%, rem(1920));
+  padding: 0 rem(160);
+  margin: 0 auto;
+
+  @include breakpoint(xmd) {
+    padding: 0 rem(40);
+  }
+
+  @include breakpoint(sm) {
+    padding: 0 rem(20);
+  }
+}
+
+.productInfo {
+  width: min(100%, rem(450));
+
+  @include breakpoint(xmd) {
+    width: 100%;
+  }
+
+  @include breakpoint(sm) {
+    & .addToCartBtn {
+      width: 100%;
+    }
+  }
+
+}
+
+.priceContainer {
+  padding-top: rem(30);
+  & button {
+    margin-top: rem(20);
+    max-height: rem(48);
+  }
+
+  @include breakpoint(xmd) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include breakpoint(sm) {
+    display: block;
+    padding-top: rem(10);
+
+    & button {
+      margin-top: rem(20);
+      font-size: rem(16);
+      padding: rem(10) rem(20);
+    }
+  }
+}
+
+.productTitle {
+  font-weight: 500;
+  margin: rem(10) 0;
+}
+
+.suggestedSectionTitle {
+  font-weight: 500;
+  margin-bottom: rem(45);
+
+  @include breakpoint(xmd) {
+    margin-bottom: rem(40);
+  }
+
+  @include breakpoint(sm) {
+    margin-bottom: rem(20);
+  }
+
+}
+
+.productCategory {
+  color: $color-text-grey;
+  margin-top: rem(15);
+
+  @include breakpoint(xmd) {
+    margin-top: rem(10);
+  }
+}
+
+.productPrice {
+  font-size: rem(20);
+  margin: 0;
+
+  &:not(:last-child) {
+    margin: 0;
+  }
+}
+
+.imgContainer {
+  height: 0;
+  overflow: hidden;
+  padding-top: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  @include breakpoint(xmd) {
+    width: 100%;
+    height: min(50%, rem(200));
+  }
+
+  & img {
+    width: min(100%, rem(600));
+    height: min(100%, rem(600));
+    vertical-align: top;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+
+    @include breakpoint(xmd) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

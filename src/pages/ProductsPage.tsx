@@ -2,7 +2,7 @@ import ProductsGrid from "../components/ProductsGrid";
 import { products, productCategories, ProductCategory } from "../products";
 import { Link } from "react-router-dom";
 import { ReactComponent as ArrowIcon } from "../assets/icons/arrow-right.svg";
-import style from "styles/pages/ProjectsPage.module.scss";
+import style from "styles/pages/ProductsPage.module.scss";
 import { useQueryString } from "../hooks/useQueryString";
 
 function ProductsPage() {
