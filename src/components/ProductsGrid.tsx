@@ -67,8 +67,6 @@ function useProductsGrid(props: Props) {
     [style.gridElement]: !isScrollable(),
   });
 
-  console.log(productCardClasses);
-
   return {
     products,
     limit,
