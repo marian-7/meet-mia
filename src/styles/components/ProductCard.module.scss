@@ -67,6 +67,7 @@
   font-size: rem(20);
   font-weight: 500;
   padding: rem(12) 0 rem(16) 0;
+  transition: all .3s ease-out;
 
   @include breakpoint(lg) {
     font-size: rem(17);

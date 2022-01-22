@@ -1,0 +1,35 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/functions";
+@import "src/styles/helpers/mixins";
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formTitle {
+  margin-bottom: rem(15);
+}
+
+.input {
+  &:global(.MuiFormControl-root) {
+    margin: rem(10) 0;
+  }
+}
+
+.actions {
+  margin-top: rem(30);
+  width: 100%;
+  text-align: right;
+
+  @include breakpoint(xmd) {
+    margin-top: rem(20);
+  }
+
+  @include breakpoint(sm) {
+    & button {
+      width: 100%;
+    }
+  }
+}

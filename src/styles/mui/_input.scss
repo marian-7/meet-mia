@@ -1,0 +1,28 @@
+@import "src/styles/helpers/variables";
+
+.MuiInputBase-root {
+  &.MuiOutlinedInput-root {
+    border-radius: 0;
+    font-family: "Montserrat", "Arial", sans-serif;
+
+    &.Mui-focused .MuiOutlinedInput-notchedOutline {
+      border-color: $color-primary;
+    }
+
+    & .MuiInputBase-input {
+      &.MuiOutlinedInput-input {
+        font-family: "Montserrat", "Arial", sans-serif;
+      }
+    }
+  }
+}
+
+.MuiTextField-root {
+  & .MuiInputLabel-root {
+    font-family: "Montserrat", "Arial", sans-serif;
+
+    &.Mui-focused {
+      color: $color-primary;
+    }
+  }
+}

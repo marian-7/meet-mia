@@ -70,10 +70,10 @@
 }
 
 .productsSectionTitle {
-  margin-bottom: rem(90);
+  margin-bottom: rem(45);
 
   @include breakpoint(xmd) {
-    margin-bottom: rem(40);
+    margin-bottom: rem(20);
   }
 }
 

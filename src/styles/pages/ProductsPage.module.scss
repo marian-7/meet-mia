@@ -12,7 +12,7 @@
   }
 
   @include breakpoint(xmd) {
-    padding: rem(40);
+    padding: rem(40) 0;
   }
 }
 
